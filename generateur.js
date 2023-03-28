@@ -23,7 +23,7 @@ function generateTitle() {
   var adjectifs3s = adjectifs3[getRandomInt(0, adjectifs3.length - 1)];
   
   
-  var titre = type_de_masters + " " + adjectif + " en " + domaine + " " + qualificatifs + " " + adjectifs2s + " " + domaines2s + " " + adjectifs3s;
+  var titre = type_de_masters + " " + adjectif + " en " + domaine + " " + qualificatifs + " " + adjectifs2s + " et " + domaines2s + " " + adjectifs3s;
   
 
   return titre;
