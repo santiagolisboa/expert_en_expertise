@@ -9,7 +9,7 @@ const openaiUrl = "https://api.openai.com/v1/engines/davinci/completions";
 // API key
 const openaiHeaders = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer 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'
+    'Authorization': 'Bearer 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'
   };
   
 
