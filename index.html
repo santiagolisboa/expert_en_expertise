@@ -1,93 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Générateur d'intitulés de Masters</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="/media/favicon.ico.png" type="image/x-icon">
-</head>
-<body>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>HUITECISSE - Hécole Uniformisante de l'Intellect Technico-Etudiante de Consulting Intuitif Synergique Semipro
+      Effectif</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/media/favicon.ico.png" type="image/x-icon">
+  </head>
+
+  <body>
 
 
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="media/logo.png" alt="Logo">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="media/logo.png" alt="Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="A_PROPOS_DE_NOUS.html">A propos de nous</a></li>
+            <li><a href="VIESURLECAMPUS.html">Postuler</a></li>
+            <li><a href="VIESURLECAMPUS.html">Vie sur le campus</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
+    </header>
+
+    <!------------GENERATEUR + CAROUSEL ----------->
+
+    <div class="main">
+      <div class="container-generateur">
+        <h1>Bienvenue à l'école HUITECISSE</h1>
+        <h2 class="scoolname">Hécole Uniformisante de l'Intellect Technico-Etudiante de Consulting Intuitif Synergique
+          Semipro Effectif</h2>
+        <div class="div_button">
+          <button id="generate">Générer un Master</button>
+          <h2 id="title"></h2>
+          <span id="description"></span>
+        </div>
+
+        
+      </div>
+      <div class="carousel-container">
+        <div class="carousel">
+          <swiper-container>
+            <swiper-slide><img src="media/equal_rights.png" alt="Equal equal_rights"></swiper-slide>
+            <swiper-slide><img src="media/student_diversity.png" alt="Student diversity"></swiper-slide>
+            <swiper-slide><img src="media/students_playing.png" alt="Students playins"></swiper-slide>
+            <swiper-slide><img src="media/students_promo.png" alt="Students promo"></swiper-slide>
+            <swiper-slide><img src="media/the_graduates.png" alt="The graduates"></swiper-slide>
+          </swiper-container>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-------------- FOOTER ------------------>
+
+    <footer>
+      <div class="footer-section">
+        <h3>A PROPOS</h3>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="A_PROPOS_DE_NOUS.html">A propos de nous</a></li>
-          <li><a href="VIESURLECAMPUS.html">Postuler</a></li>
-          <li><a href="VIESURLECAMPUS.html">Vie sur le campus</a></li>
+          <li>Notre école</li>
+          <li>Notre équipe</li>
+          <li>Contactez-nous</li>
         </ul>
-      </nav>
-    </div>
-  </header>
-  
- <!------------GENERATEUR + CAROUSEL ----------->
-
-  <div class="main">
-    <div class="container-generateur">
-      <h1>Bienvenue à l'école HUITECISSE</h1>
-      <button id="generate">Générer un Master</button>
-      <h2 id="title"></h2>
-    </div>
-    <div class="carousel-container">
-      <div class="carousel">
-        <swiper-container>
-                <swiper-slide><img src="media/equal_rights.png" alt="Equal equal_rights"></swiper-slide>
-                <swiper-slide><img src="media/student_diversity.png" alt="Student diversity"></swiper-slide>
-                <swiper-slide><img src="media/students_playing.png" alt="Students playins"></swiper-slide>
-                <swiper-slide><img src="media/students_promo.png" alt="Students promo"></swiper-slide>
-                <swiper-slide><img src="media/the_graduates.png" alt="The graduates"></swiper-slide>
-        </swiper-container>
       </div>
+      <div class="footer-section">
+        <h3>FACULTÉ ET RECHERCHE</h3>
+        <ul>
+          <li>Notre corps professoral</li>
+          <li>Projets de recherche</li>
+          <li>Publications</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>PROGRAMMES</h3>
+        <ul>
+          <li>Programmes de formation</li>
+          <li>Admission</li>
+          <li>Bourses d'études</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>ACTUALITÉS ET ÉVÉNEMENTS</h3>
+        <ul>
+          <li>Dernières nouvelles</li>
+          <li>Événements à venir</li>
+          <li>Abonnez-vous à notre newsletter</li>
+        </ul>
+      </div>
+    </footer>
 
-      
-    </div>
-  </div>
 
-  <!-------------- FOOTER ------------------>
+    <script src="generateur.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@openai/api@0.6.0/dist/openai-api.min.js"></script>
+    <script src="chatGPT.js"></script>
+  </body>
 
-  <footer>
-    <div class="footer-section">
-      <h3>A PROPOS</h3>
-      <ul>
-        <li>Notre école</li>
-        <li>Notre équipe</li>
-        <li>Contactez-nous</li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3>FACULTÉ ET RECHERCHE</h3>
-      <ul>
-        <li>Notre corps professoral</li>
-        <li>Projets de recherche</li>
-        <li>Publications</li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3>PROGRAMMES</h3>
-      <ul>
-        <li>Programmes de formation</li>
-        <li>Admission</li>
-        <li>Bourses d'études</li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h3>ACTUALITÉS ET ÉVÉNEMENTS</h3>
-      <ul>
-        <li>Dernières nouvelles</li>
-        <li>Événements à venir</li>
-        <li>Abonnez-vous à notre newsletter</li>
-      </ul>
-    </div>
-  </footer>
-  
-
-  <script src="generateur.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-</body>
 </html>
-
